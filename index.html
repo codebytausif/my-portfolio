@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Full-Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header class="header">
+    <a href="#home" class="logo">Portfolio.</a>
+    <nav class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-right">
+      <button id="theme-toggle" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+      </button>
+      <div class="menu-icon" id="menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <section class="home" id="home">
+    <div class="home-content">
+      <h3>Hello, It's Me</h3>
+      <h1>Tausif Ur Rehman</h1>
+      <h3>And I'm a <span class="multiple-text"></span></h3>
+      <p>I build modern web applications, solve backend problems, and create digital solutions that actually work.</p>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <a href="#" class="btn">Download CV</a>
+    </div>
+    <div class="home-img">
+      <img src="./assets/profile.jpg" alt="Profile Picture">
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="./assets/profile.jpg" alt="About Me">
+    </div>
+    <div class="about-content">
+      <h2 class="heading">About <span>Me</span></h2>
+      <h3>Full-Stack Developer</h3>
+      <p>I am a passionate programmer who builds web apps, solves problems, works with modern technologies, and provides
+        professional freelance services. With a strong foundation in both frontend and backend development, I strive to
+        create seamless and efficient digital experiences.</p>
+
+      <div class="skills-container">
+        <h4>My Skills</h4>
+        <div class="skills-grid">
+          <div class="skill-item"><i class="fab fa-html5"></i> HTML/CSS</div>
+          <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
+          <div class="skill-item"><i class="fab fa-react"></i> React/Next.js</div>
+          <div class="skill-item"><i class="fab fa-node"></i> Node.js</div>
+          <div class="skill-item"><i class="fab fa-php"></i> PHP/Laravel</div>
+          <div class="skill-item"><i class="fas fa-database"></i> SQL/NoSQL</div>
+        </div>
+      </div>
+
+      <a href="#" class="btn">Read More</a>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <h2 class="heading">Our <span>Services</span></h2>
+    <div class="services-container">
+      <div class="services-box">
+        <i class="fas fa-code"></i>
+        <h3>Web Development</h3>
+        <p>Complete websites and web apps using modern technologies like React, Next.js, and Node.js.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+      <div class="services-box">
+        <i class="fas fa-server"></i>
+        <h3>Backend Development</h3>
+        <p>APIs, authentication, databases, and server-side systems built for performance and security.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+      <div class="services-box">
+        <i class="fas fa-paint-brush"></i>
+        <h3>UI/UX Design</h3>
+        <p>Responsive UI, clean layouts, and user-friendly experiences that look great on all devices.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+      <div class="services-box">
+        <i class="fab fa-wordpress"></i>
+        <h3>WordPress</h3>
+        <p>Business websites, eCommerce, custom themes, and plugins tailored to your needs.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me</span></h2>
+    <form action="#">
+      <div class="input-box">
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email Address">
+      </div>
+      <div class="input-box">
+        <input type="number" placeholder="Mobile Number">
+        <input type="text" placeholder="Email Subject">
+      </div>
+      <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+      <input type="submit" value="Send Message" class="btn">
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-text">
+      <p>Copyright &copy; 2023 by Codehal | All Rights Reserved.</p>
+    </div>
+    <div class="footer-iconTop">
+      <a href="#home"><i class="fas fa-angle-up"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
