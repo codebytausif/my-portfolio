@@ -18,7 +18,7 @@ window.onscroll = () => {
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height) {
+        if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
@@ -36,7 +36,7 @@ window.onscroll = () => {
 };
 
 /* Scroll Reveal */
-ScrollReveal({ 
+ScrollReveal({
     reset: true,
     distance: '80px',
     duration: 2000,
@@ -58,27 +58,36 @@ const typed = new Typed('.multiple-text', {
 });
 
 /* Dark Mode Toggle */
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
-const icon = themeToggle.querySelector('i');
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
 
-// Check for saved user preference, if any, on load of the website
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme) {
-    body.classList.add(currentTheme);
-    if (currentTheme === 'light-mode') {
-        icon.classList.replace('fa-moon', 'fa-sun');
+    // Add null check to prevent errors
+    if (!themeToggle) {
+        console.error('Theme toggle button not found');
+        return;
     }
-}
 
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('light-mode');
-    
-    if (body.classList.contains('light-mode')) {
-        icon.classList.replace('fa-moon', 'fa-sun');
-        localStorage.setItem('theme', 'light-mode');
-    } else {
-        icon.classList.replace('fa-sun', 'fa-moon');
-        localStorage.setItem('theme', 'dark-mode');
+    const body = document.body;
+    const icon = themeToggle.querySelector('i');
+
+    // Check for saved user preference, if any, on load of the website
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        body.classList.add(currentTheme);
+        if (currentTheme === 'light-mode') {
+            icon.classList.replace('fa-moon', 'fa-sun');
+        }
     }
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('light-mode');
+
+        if (body.classList.contains('light-mode')) {
+            icon.classList.replace('fa-moon', 'fa-sun');
+            localStorage.setItem('theme', 'light-mode');
+        } else {
+            icon.classList.replace('fa-sun', 'fa-moon');
+            localStorage.setItem('theme', 'dark-mode');
+        }
+    });
 });
